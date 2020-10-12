@@ -1,0 +1,5 @@
+~/.nanorc
+== contents below this line will be copied to the path above ==
+set tabsize 4
+set tabstospaces
+set smarthome
