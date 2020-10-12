@@ -9,11 +9,14 @@
 # @copyright Copyright 2020 Evan Elias Young. All rights reserved.
 ###
 
-which python3 2&>1
+which python3 &> /dev/null
 if [ ! $? -eq 0 ]; then echo "failed to detect a python3 installation"; exit 1; fi
 
-dated-$(python3 -m pip list -o --format=freeze | sed 's|==.*||g')
+python3 -m pip &> /dev/null
+if [ ! $? -eq 0 ]; then echo "failed to detect a pip3 installation"; exit 1; fi
 
-while IFS=read -r line; do
-    pip3 install -U "$line"
+dated=$(python3 -m pip list -o --format=freeze | sed 's|==.*||g')
+
+while IFS= read -r line; do
+    python3 -m pip install -U "$line"
 done <<< "$dated"
