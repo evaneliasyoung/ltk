@@ -1,0 +1,28 @@
+~/.bash_aliases
+== contents below this line will be copied to the path above ==
+# navigation
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+
+# listings
+alias ls='ls -l --color-auto --time-style long-iso'
+alias ll='ls -al --color-auto --time-style long-iso'
+alias ll='ls -dl --color-auto --time-style long-iso .*'
+alias f='find . -name'
+alias ff='find / -name'
+
+# processes
+alias h='history'
+alias j='jobs -l'
+alias psmem='ps auxf | sort -nrk4'
+alias pscpu='ps auxf | sort -nrk3'
+
+# safety
+alias rm='rm --preserve-root'
+alias chown='chown --preserve-root'
+alias chmod='chmod --preserve-root'
+alias chgrp='chgrp --preserve-root'
+
+# misc
+alias ip='ip -c'
