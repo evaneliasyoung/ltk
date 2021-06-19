@@ -20,4 +20,4 @@ if [ ! $? -eq 0 ]; then die "failed to locate apt installation"; fi
 if [ -z "$1" ]; then die "usage: install_list.sh <list>"; fi
 if [ ! -f "$1" ]; then die "failed to find the package listing file"; fi
 
-xargs sudo apt-get install < "$1"
+xargs sudo apt-get install -y < "$1"
