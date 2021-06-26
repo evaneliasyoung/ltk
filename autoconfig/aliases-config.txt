@@ -6,9 +6,9 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 
 # listings
-alias ls='ls -l --color-auto --time-style long-iso'
-alias ll='ls -al --color-auto --time-style long-iso'
-alias l.='ls -dl --color-auto --time-style long-iso .*'
+alias ls='ls -l --color=auto --time-style long-iso'
+alias ll='ls -al --color=auto --time-style long-iso'
+alias l.='ls -dl --color=auto --time-style long-iso .*'
 alias f='find . -name'
 alias ff='find / -name'
 
